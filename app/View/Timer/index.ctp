@@ -460,63 +460,89 @@
     //timer minute plus
     $('#id_minute_plus').click(function()
     {
-      min = ++min;
-      tm = ('00' + min).slice(-2); 
-      // alert(tm);
+      // min = ++min;
+      // tm = ('00' + min).slice(-2); 
+      // // alert(tm);
+      // 
+      // if(min > 99){
+      //   min = 0;
+      //   tm = ('00' + min).slice(-2);
+      // }
       
-      if(min > 99){
-        min = 0;
-        tm = ('00' + min).slice(-2);
+      remainingTime += 60;
+      if (remainingTime > 5940) {
+        remainingTime = 0;
       }
+      return $('#id_gametimer').html(convertSeconds(remainingTime));
+      // return  $('#id_gametimer').html(tm+":"+ts);
       
-      return  $('#id_gametimer').html(tm+":"+ts);
     });
     
     //timere minute minuse
     $('#id_minute_minuse').click(function()
     {
       
-      min= --min;
-      tm = ('00' + min).slice(-2);
-      // alert(tm);
+      // min= --min;
+      // tm = ('00' + min).slice(-2);
+      // // alert(tm);
+      // 
+      // if(min < 0){
+      //   min = 99;
+      //   tm = ('00' + min).slice(-2);
+      // }
       
-      if(min < 0){
-        min = 99;
-        tm = ('00' + min).slice(-2);
+      if (remainingTime > 0) {
+        remainingTime -= 60;
+      } else if (remainingTime <= 0) {
+        remainingTime = 5940;
       }
-      
-      return $('#id_gametimer').html(tm+":"+ts);
+      return $('#id_gametimer').html(convertSeconds(remainingTime));
+      // return $('#id_gametimer').html(tm+":"+ts);
       
     });
     
     //timer second plus
     $('#id_second_plus').click(function()
     {
-      second = ++second;
-      ts = ('00' + second).slice(-2);
-      // alert(tm+":"+ts);
+      // second = ++second;
+      // ts = ('00' + second).slice(-2);
+      // // alert(tm+":"+ts);
+      // 
+      // if(second > 59){
+      //   second = 0;
+      //   ts = ('00' + second).slice(-2);
+      // }
+      // 
+      // return $('#id_gametimer').html(tm+":"+ts);
       
-      if(second > 59){
-        second = 0;
-        ts = ('00' + second).slice(-2);
+      if (remainingTime > 0) {
+        remainingTime += 1;
+      } else if (remainingTime <= 0) {
+        remainingTime = 59;
       }
-      
-      return $('#id_gametimer').html(tm+":"+ts);
+      return $('#id_gametimer').html(convertSeconds(remainingTime));
     });
     
     //timer second minuse
     $('#id_second_minuse').click(function()
     {
-      second = --second;
-      ts = ('00' + second).slice(-2);
-      // alert(ts);
+      // second = --second;
+      // ts = ('00' + second).slice(-2);
+      // // alert(ts);
+      // 
+      // if(second < 0){
+      //   second = 59;
+      //   ts = ('00' + second).slice(-2);
+      // }
+      // 
+      // return $('#id_gametimer').html(tm+":"+ts);
       
-      if(second < 0){
-        second = 59;
-        ts = ('00' + second).slice(-2);
+      if (remainingTime > 0) {
+        remainingTime -= 1;
+      } else if (remainingTime <= 0) {
+        remainingTime = 59;
       }
-      
-      return $('#id_gametimer').html(tm+":"+ts);
+      return $('#id_gametimer').html(convertSeconds(remainingTime));
       
     });
     
@@ -557,7 +583,7 @@
     //flag for paused
     var myInterval = -1;
     
-    var remainingTime;
+    var remainingTime = 0;
     
     // when you click gametimer btn timer is started 
     $('#id_gametimer_btn').click(function()
@@ -595,8 +621,9 @@
         
         // console.log("remainingTime"+"="+remainingTime);
         // console.log(convertSeconds(gametime - countDown));
-        console.log("remainingTime on pause"+"="+min);
-        console.log("remainingTime on pause"+"="+second);
+        // console.log("remainingTime on pause"+"="+min);
+        // console.log("remainingTime on pause"+"="+second);
+        console.log("remainingTime on pause"+"= "+remainingTime );
         console.log(convertSeconds(remainingTime));
         console.log("countdown on pause"+"="+countDown);
         
@@ -607,11 +634,11 @@
         
         countDown++;
         
-        remainingTime = (gametime - countDown);
+        remainingTime = (remainingTime - 1);
         console.log("remainingTime on play"+"="+remainingTime);
         
-        min = Math.floor(remainingTime / 60);
-        second = remainingTime % 60;
+        // min = Math.floor(remainingTime / 60);
+        // second = remainingTime % 60;
         
         //call convertSeconds function
         $('#id_gametimer').html(convertSeconds(remainingTime));
@@ -619,16 +646,20 @@
         //if gaime time = 0; buzzer is played. 
         if(remainingTime == 0)
         {
+          //インターバルの処理を止められなかったのでHTMLを00:00に書き換えて動いてないように見せている。
+          $('#id_gametimer').html("00:00");
           buzzer.play();
           // gametime = 0; になったらintervalを消す。
           clearInterval(myInterval);
         }
-        else if (gametime == 0) //gametimerが00:00の状態でbtn押下してもタイマーを起動させない。
-        {
-          //インターバルの処理を止められなかったのでHTMLを00:00に書き換えて動いてないように見せている。
-          $('#id_gametimer').html("00:00");
-          clearInterval(myInterval);
-        }
+        
+        // else if (remainingTime == 0) 
+        // // else if (gametime == 0) //gametimerが00:00の状態でbtn押下してもタイマーを起動させない。
+        // {
+        //   //インターバルの処理を止められなかったのでHTMLを00:00に書き換えて動いてないように見せている。
+        //   $('#id_gametimer').html("00:00");
+        //   clearInterval(myInterval);
+        // }
       }
       
     });
