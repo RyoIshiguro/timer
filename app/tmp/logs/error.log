@@ -1,0 +1,220 @@
+2020-03-14 02:28:43 Error: [MissingViewException] View file "Pages/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/index.ctp',
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/index')
+#1 /Applications/MAMP/htdocs/timer/lib/Cake/Controller/Controller.php(968): View->render('index', NULL)
+#2 /Applications/MAMP/htdocs/timer/app/Controller/PagesController.php(72): Controller->render('index')
+#3 [internal function]: PagesController->display('index')
+#4 /Applications/MAMP/htdocs/timer/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#9 {main}
+2020-03-14 02:33:45 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:36:17 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:38:13 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:40:01 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:41:01 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:43:39 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:48:57 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:51:11 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:54:36 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:54:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:55:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 02:58:12 Error: [ParseError] syntax error, unexpected '=', expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /timer/
+Stack Trace:
+#0 [internal function]: App::load('TimerController')
+#1 [internal function]: spl_autoload_call('TimerController')
+#2 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(266): class_exists('TimerController')
+#3 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#7 {main}
+2020-03-14 02:58:43 Error: [ParseError] syntax error, unexpected '=', expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /timer/
+Stack Trace:
+#0 [internal function]: App::load('TimerController')
+#1 [internal function]: spl_autoload_call('TimerController')
+#2 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(266): class_exists('TimerController')
+#3 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#7 {main}
+2020-03-14 02:58:56 Error: [ParseError] syntax error, unexpected '=', expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /timer/
+Stack Trace:
+#0 [internal function]: App::load('TimerController')
+#1 [internal function]: spl_autoload_call('TimerController')
+#2 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(266): class_exists('TimerController')
+#3 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#7 {main}
+2020-03-14 02:59:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 03:01:35 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 03:02:08 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 03:06:06 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 03:07:41 Error: [MissingControllerException] Controller class ToppageController could not be found.
+Exception Attributes: array (
+  'class' => 'ToppageController',
+  'plugin' => NULL,
+)
+Request URL: /timer/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#2 {main}
+2020-03-14 03:08:04 Error: [ParseError] syntax error, unexpected '=', expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /timer/
+Stack Trace:
+#0 [internal function]: App::load('TimerController')
+#1 [internal function]: spl_autoload_call('TimerController')
+#2 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(266): class_exists('TimerController')
+#3 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/timer/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/timer/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/MAMP/htdocs/timer/index.php(41): require('/Applications/M...')
+#7 {main}
