@@ -515,7 +515,7 @@
       // 
       // return $('#id_gametimer').html(tm+":"+ts);
       
-      if (remainingTime > 0) {
+      if (remainingTime >= 0) {
         remainingTime += 1;
       } else if (remainingTime <= 0) {
         remainingTime = 59;
@@ -610,6 +610,11 @@
         console.log("gametime on play"+"="+gametime);
         console.log(convertSeconds(gametime - countDown));
         
+        $('#id_minute_plus').prop('disabled',true);
+        $('#id_minute_minuse').prop('disabled',true);
+        $('#id_second_plus').prop('disabled',true);
+        $('#id_second_minuse').prop('disabled',true);
+        
       } 
       else //timer start to paused
       {
@@ -627,6 +632,10 @@
         console.log(convertSeconds(remainingTime));
         console.log("countdown on pause"+"="+countDown);
         
+        $('#id_minute_plus').prop('disabled',false);
+        $('#id_minute_minuse').prop('disabled',false);
+        $('#id_second_plus').prop('disabled',false);
+        $('#id_second_minuse').prop('disabled',false);
       }
       
       function timeIt()
@@ -651,6 +660,11 @@
           buzzer.play();
           // gametime = 0; になったらintervalを消す。
           clearInterval(myInterval);
+          
+          $('#id_minute_plus').prop('disabled',false);
+          $('#id_minute_minuse').prop('disabled',false);
+          $('#id_second_plus').prop('disabled',false);
+          $('#id_second_minuse').prop('disabled',false);
         }
         
         // else if (remainingTime == 0) 
