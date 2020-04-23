@@ -161,6 +161,10 @@
     font-size: 50px;
   }
   
+  #id_24_btn{
+    font-size: 50px;
+  }
+  
 </style>
 
 <!-- <h1>hello timer index.ctp</h1> -->
@@ -283,17 +287,17 @@
     
     <!-- A point plus -->
     <div class="class_24s_plus_btn col-md-2">
-      <button type="button" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋1s </button>
+      <button type="button" id="id_24_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋1s </button>
     </div>
     
     <!-- A point minus -->
     <div class="class_24s_minus_btn col-md-2">
-        <button type="button" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1s </button>
+        <button type="button"id="id_24_minus" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1s </button>
     </div>
     
     <!-- serve left -->
     <div class="class_24timer col-md-4">
-      <button type="button" class="btn btn-light rounded-circle p-0 class_timer"> 24s start stop </button>
+      <button type="button" id="id_24_btn" class="btn btn-light rounded-circle p-0 class_timer"> 24s start </button>
     </div>
     
     <!-- 14s -->
@@ -622,6 +626,8 @@
         $('#id_second_plus').prop('disabled',true);
         $('#id_second_minuse').prop('disabled',true);
         
+        $('#id_gametimer_btn').html('timer stop');
+        
       } 
       else //timer start to paused
       {
@@ -643,6 +649,9 @@
         $('#id_minute_minuse').prop('disabled',false);
         $('#id_second_plus').prop('disabled',false);
         $('#id_second_minuse').prop('disabled',false);
+        
+        $('#id_gametimer_btn').html('timer start');
+        
       }
       
       function timeIt()
@@ -693,6 +702,40 @@
         //   clearInterval(myInterval);
         // }
       }
+      
+    });
+    //timer start and stop
+    //------------------
+    
+    //24s timer start and stop
+    //------------------
+    var tf = 0;
+    
+    var tfTimer = 24;
+    
+    var tfInterval = 0;
+    
+    //if tfTimer = 24; 24_plus_btn is disabled.
+    $('#id_24_plus').prop('disabled',true);
+    
+    $('#id_24_plus').click(function(){
+      
+      if(tfTimer == 24){
+        $('#id_24_plus').prop('disabled',true);
+      } else if (tfTimer <= 24) {
+        tfTimer +=1;
+      } else if (tfTimer >= 24) {
+        tfTimer = 24;
+        return $('#id_24').html(tfTimer);
+      }
+      
+      return $('#id_24').html(tfTimer);
+      
+    });
+    
+    
+    
+    $('#id_24_btn').click(function(){
       
     });
     
