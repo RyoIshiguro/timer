@@ -491,10 +491,13 @@
       //   tm = ('00' + min).slice(-2);
       // }
       
-      if (remainingTime > 0) {
+      if (remainingTime > 60) {
         remainingTime -= 60;
       } else if (remainingTime <= 0) {
         remainingTime = 5940;
+      } else {
+        remainingTime = 0;
+        return $('#id_gametimer').html("00:00");
       }
       return $('#id_gametimer').html(convertSeconds(remainingTime));
       // return $('#id_gametimer').html(tm+":"+ts);
