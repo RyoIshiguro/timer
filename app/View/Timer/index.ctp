@@ -157,6 +157,10 @@
     color: orange;
   }
   
+  #id_gametimer_btn{
+    font-size: 50px;
+  }
+  
 </style>
 
 <!-- <h1>hello timer index.ctp</h1> -->
@@ -253,7 +257,7 @@
     
     <!-- timer start stop -->
     <div class="class_timer col-md-4">
-      <button type="button" id="id_gametimer_btn" class="btn btn-light rounded-circle p-0 class_timer"> tiemr start stop </button>
+      <button type="button" id="id_gametimer_btn" class="btn btn-light rounded-circle p-0 class_timer"> timer start </button>
     </div>
     
     <!-- buzzer audio file -->
@@ -661,6 +665,17 @@
           //インターバルの処理を止められなかったのでHTMLを00:00に書き換えて動いてないように見せている。
           $('#id_gametimer').html("00:00");
           buzzer.play();
+          // gametime = 0; になったらintervalを消す。
+          clearInterval(myInterval);
+          
+          $('#id_minute_plus').prop('disabled',false);
+          $('#id_minute_minuse').prop('disabled',false);
+          $('#id_second_plus').prop('disabled',false);
+          $('#id_second_minuse').prop('disabled',false);
+        } 
+        else if (remainingTime <= 0) 
+        {
+          $('#id_gametimer').html("00:00");
           // gametime = 0; になったらintervalを消す。
           clearInterval(myInterval);
           
