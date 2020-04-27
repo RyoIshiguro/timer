@@ -715,15 +715,14 @@
     
     var tfInterval = 0;
     
-    //if tfTimer = 24; 24_plus_btn is disabled.
-    $('#id_24_plus').prop('disabled',true);
-    
+    //24s plus 
     $('#id_24_plus').click(function(){
       
       if(tfTimer == 24){
-        $('#id_24_plus').prop('disabled',true);
+        tfTimer = 24;
       } else if (tfTimer <= 24) {
         tfTimer +=1;
+        $('#id_24_plus').prop('disabled',false);
       } else if (tfTimer >= 24) {
         tfTimer = 24;
         return $('#id_24').html(tfTimer);
@@ -735,8 +734,18 @@
     
     
     
-    $('#id_24_btn').click(function(){
+    
+    //24s minuse
+    $('#id_24_minus').click(function(){
       
+      if(tfTimer > 0){
+        tfTimer -= 1;
+      }else if (tfTimer <= 0 ) {
+        tfTimer = 0;
+        return $('#id_24').html(tfTimer);
+      }
+      
+      return $('#id_24').html(tfTimer);
     });
     
     //キッチンタイマー例
