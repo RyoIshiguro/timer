@@ -712,8 +712,12 @@
     var tf = 0;
     
     var tfTimer = 24;
+    console.log("tfTimer"+"="+tfTimer);
     
-    var tfInterval = 0;
+    var tfInterval = -1;
+    console.log("tfInterval"+"="+tfInterval);
+    
+    var tfremainingtime = 0;
     
     //24s plus 
     $('#id_24_plus').click(function(){
@@ -727,6 +731,8 @@
         tfTimer = 24;
         return $('#id_24').html(tfTimer);
       }
+      
+      console.log("tfTimer was plus1"+"="+tfTimer);
       
       return $('#id_24').html(tfTimer);
       
@@ -745,8 +751,52 @@
         return $('#id_24').html(tfTimer);
       }
       
+      console.log("tfTimer was minuse1"+"="+tfTimer);
+      
       return $('#id_24').html(tfTimer);
     });
+    
+    //when you click gametimer btn timer is started also stop
+    $('#id_24_btn').click(function(){
+      
+      if(tfInterval == -1){
+        tfInterval = setInterval(tftimeIt,1000);
+        //debug
+        console.log("tfTimer"+"="+tfInterval);
+        
+        $('#id_24_plus').prop('disabled',true);
+        $('#id_24_minus').prop('disabled',true);
+        
+        $('#id_24_btn').html('24s stop');
+      } 
+      else 
+      {
+        
+      }
+      
+      function tftimeIt(){
+        //it's for calculate remainingTime
+        tfTimer = (tfTimer - 1);
+        console.log("remaining tfTimer"+"="+tfTimer); 
+        
+        $('#id_24').html(tfTimer);
+        
+        if(tfTimer == 0){
+          
+          //when 24 second time up then it's displayed 0
+          $('#id_24').html('0');
+          
+          //play buzzer sound
+          buzzer.play();
+          
+          //24 timer is stopped
+          clearInterval(tfInterval);
+        }
+      }
+      
+    });
+    
+    //------------------------------------------
     
     //キッチンタイマー例
     //http://www.shurey.com/js/craft/ktimer/index.html
