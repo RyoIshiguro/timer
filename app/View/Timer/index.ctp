@@ -771,7 +771,16 @@
       } 
       else 
       {
+        clearInterval(tfInterval);
         
+        //for next click,must set -1
+        tfInterval = -1;
+        
+        //when 24second is stopped plus and minus are enable. 
+        $('#id_24_plus').prop('disabled',false);
+        $('#id_24_minus').prop('disabled',false);
+        
+        $('#id_24_btn').html('24s start');
       }
       
       function tftimeIt(){
