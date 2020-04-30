@@ -165,6 +165,10 @@
     font-size: 50px;
   }
   
+  #id_buzzer_btn{
+    font-size: 50px;
+  }
+  
 </style>
 
 <!-- <h1>hello timer index.ctp</h1> -->
@@ -614,6 +618,11 @@
       
       //if timer paused start
       if (myInterval == - 1) {
+        
+        //when click the button it's working. this is for remove time lag. setInterval's time lag. 
+        timeIt();
+        
+        //every after one secoond it's working. time lag is happen.
         myInterval = setInterval(timeIt,1000);
         // alert(gametime);
         // min = 0;
@@ -760,9 +769,14 @@
     $('#id_24_btn').click(function(){
       
       if(tfInterval == -1){
+        
+        //when click the button it's working. this is for remove time lag. setInterval's time lag. 
+        tftimeIt();
+        
+        //after every one second it's working. it has time lag .
         tfInterval = setInterval(tftimeIt,1000);
         //debug
-        console.log("tfTimer"+"="+tfInterval);
+        console.log("tfTimer"+"="+tfTimer);
         
         $('#id_24_plus').prop('disabled',true);
         $('#id_24_minus').prop('disabled',true);
@@ -794,6 +808,11 @@
           
           //when 24 second time up then it's displayed 0
           $('#id_24').html('0');
+          
+          $('#id_24_plus').prop('disabled',false);
+          $('#id_24_minus').prop('disabled',false);
+          
+          $('#id_24_btn').html('24s start');
           
           //play buzzer sound
           buzzer.play();
