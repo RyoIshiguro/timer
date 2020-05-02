@@ -169,6 +169,46 @@
     font-size: 50px;
   }
   
+  #Af5{
+    visibility: hidden;
+  }
+  
+  #Af4{
+    visibility: hidden;
+  }
+  
+  #Af3{
+    visibility: hidden;
+  }
+  
+  #Af2{
+    visibility: hidden;
+  }
+  
+  #Af1{
+    visibility: hidden;
+  }
+  
+  #Bf5{
+    visibility: hidden;
+  }
+  
+  #Bf4{
+    visibility: hidden;
+  }
+  
+  #Bf3{
+    visibility: hidden;
+  }
+  
+  #Bf2{
+    visibility: hidden;
+  }
+  
+  #Bf1{
+    visibility: hidden;
+  }
+  
 </style>
 
 <!-- <h1>hello timer index.ctp</h1> -->
@@ -184,21 +224,21 @@
   
   <div class="row">
     <div class="col-md-1">
-      <div class="class_5foul"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
+      <div id="Af5" class="class_5foul"></div>
+      <div id="Af4" class="class_foul_count"></div>
+      <div id="Af3" class="class_foul_count"></div>
+      <div id="Af2" class="class_foul_count"></div>
+      <div id="Af1" class="class_foul_count"></div>
     </div>
     <p class="col-md-3  class_point" id="id_a_point"  value="count_A_p1p">0</p>
     <p class="col-md-4  class_24" id="id_24">24</p>
     <p class="col-md-3  class_point" id="id_b_point" value="count_B_p1p">0</p>
     <div class="col-md-1">
-      <div class="class_5foul"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
-      <div class="class_foul_count"></div>
+      <div id="Bf5" class="class_5foul"></div>
+      <div id="Bf4" class="class_foul_count"></div>
+      <div id="Bf3" class="class_foul_count"></div>
+      <div id="Bf2" class="class_foul_count"></div>
+      <div id="Bf1" class="class_foul_count"></div>
     </div>
   </div>
 
@@ -858,7 +898,106 @@
     });
     
     //foul count
+    
+    // team a foul count 
+    var Afcnt = 0;
+    //team b foul count
+    var Bfcnt = 0;
+    
+    // if(Afcnt <= 0){
+    //   $('#id_A_fminuse').prop('disabled',true);
+    // }else if (Afcnt > 0) {
+    //   $('#id_A_fminuse').prop('disabled',false);  
+    // }
+    
+    
     $('#id_A_fplus').click(function(){
+      
+      if(Afcnt < 5){
+        
+        ++Afcnt;
+        console.log('Afcnt' + '=' + Afcnt);
+        
+      } else if (Afcnt >= 5){
+        
+        Afcnt = 5;
+        
+      }
+      
+      
+      if(Afcnt == 1){
+        $('#Af1').css('visibility','visible');
+        //debug
+        // console.log('A1');
+        
+      } else if (Afcnt == 2) {
+        
+        $('#Af2').css('visibility','visible');
+        //debug
+        // console.log('A2');
+        
+      } else if (Afcnt == 3) {
+        
+        $('#Af3').css('visibility','visible');
+        //debug
+        // console.log('A3');
+        
+      } else if (Afcnt == 4) {
+        
+        $('#Af4').css('visibility','visible');
+        //debug
+        // console.log('A4');
+        
+      } else if (Afcnt == 5) {
+        
+        $('#Af5').css('visibility','visible');
+        //debug
+        // console.log('A5');
+        
+        // $('#id_A_fplus').prop('disabled','true');
+        
+      } 
+    
+      
+    });
+    
+    //team a foul minuse
+    $('#id_A_fminuse').click(function(){
+      
+      if(Afcnt > 0){
+        
+        --Afcnt;
+        console.log('Afcnt' + '=' + Afcnt);
+        
+      } else if (Afcnt <= 0) {
+        
+        Afcnt = 0;
+        
+      }
+      
+      if(Afcnt == 4){
+        
+        $('#Af5').css('visibility','');
+        
+      } else if (Afcnt == 3) {
+        
+        $('#Af4').css('visibility','');
+        
+      } else if (Afcnt == 2) {
+        
+        $('#Af3').css('visibility','');
+        
+      } else if (Afcnt == 1) {
+        
+        $('#Af2').css('visibility','');
+        
+      } else if (Afcnt == 0) {
+        
+        $('#Af1').css('visibility','');
+        
+        Afcnt = 0;
+        
+      }
       
     });
     
