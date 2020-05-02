@@ -386,7 +386,7 @@
     
     <!-- B foul minus -->
     <div class="class_foul_minus_btn col-md-2">
-      <button type="button" id="id_B_fminus"class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_B_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
     </div>
     
   </div>
@@ -904,13 +904,6 @@
     //team b foul count
     var Bfcnt = 0;
     
-    // if(Afcnt <= 0){
-    //   $('#id_A_fminuse').prop('disabled',true);
-    // }else if (Afcnt > 0) {
-    //   $('#id_A_fminuse').prop('disabled',false);  
-    // }
-    
-    
     $('#id_A_fplus').click(function(){
       
       if(Afcnt < 5){
@@ -996,6 +989,87 @@
         $('#Af1').css('visibility','');
         
         Afcnt = 0;
+        
+      }
+      
+    });
+    
+    //team b foul plus
+    $('#id_B_fplus').click(function(){
+      
+      if(Bfcnt < 5){
+        
+        ++Bfcnt
+        console.log('Bfcnt'+"="+Bfcnt);
+        
+      } else if (Bfcnt >= 5) {
+        
+        Bfcnt = 5;
+        
+      }
+      
+      
+      
+      if(Bfcnt == 1){
+        
+        $('#Bf1').css('visibility','visible');
+      
+      } else if (Bfcnt ==2) {
+        
+        $('#Bf2').css('visibility','visible');
+        
+      } else if (Bfcnt == 3) {
+        
+        $('#Bf3').css('visibility','visible');
+        
+      } else if (Bfcnt == 4) {
+        
+        $('#Bf4').css('visibility','visible');
+        
+      } else if (Bfcnt ==5) {
+        
+        $('#Bf5').css('visibility','visible');
+        
+      }
+      
+      
+    });
+    
+    //team b foul minuse
+    $('#id_B_fminuse').click(function(){
+      
+      if(Bfcnt > 0){
+        
+        --Bfcnt;
+        console.log('Bfcnt' + '=' + Bfcnt);
+        
+      } else if (Bfcnt <= 0) {
+        
+        Bfcnt = 0;
+        
+      }
+      
+      if(Bfcnt == 4){
+        
+        $('#Bf5').css('visibility','');
+        
+      } else if (Bfcnt == 3) {
+        
+        $('#Bf4').css('visibility','');
+        
+      } else if (Bfcnt == 2) {
+        
+        $('#Bf3').css('visibility','');
+        
+      } else if (Bfcnt == 1) {
+        
+        $('#Bf2').css('visibility','');
+        
+      } else if (Bfcnt == 0) {
+        
+        $('#Bf1').css('visibility','');
+        
+        Bfcnt = 0;
         
       }
       
