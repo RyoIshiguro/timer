@@ -91,11 +91,11 @@
   }
   
   .btn-primary.rounded-circle.p-0{
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .btn-danger.rounded-circle.p-0{
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .btn.btn-light.rounded-circle.p-0{
@@ -255,12 +255,12 @@
     
     <!-- A point plus -->
     <div class="class_up_btn col-md-2"  style="text-align:center;">
-      <button type="button" id="id_plus_h1p" class="btn btn-primary rounded-circle p-0" data_points="1" style="width:5rem;height:5rem; "> ＋1p </button>
+      <button type="button" id="id_plus_h1p" class="btn btn-primary rounded-circle p-0" data_points="1" style="width:5rem;height:5rem; "> ＋P </button>
     </div>
     
     <!-- A point minus -->
     <div class="class_minus_btn col-md-2" style="text-align:center;">
-        <button type="button"id="id_minus_h1p" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1s </button>
+        <button type="button"id="id_minus_h1p" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -P </button>
     </div>
     
     <!-- serve left -->
@@ -275,12 +275,12 @@
     
     <!-- B point plus -->
     <div class="class_up_btn col-md-2" style="text-align:center;">
-      <button type="button" id="id_plus_a1p" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> +1p </button>
+      <button type="button" id="id_plus_a1p" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> +P </button>
     </div>
     
     <!-- B point minus -->
     <div class="class_minus_btn col-md-2" style="text-align:center;">
-      <button type="button" id="id_minus_a1p" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1p </button>
+      <button type="button" id="id_minus_a1p" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -P </button>
     </div>
     
   </div>
@@ -295,12 +295,12 @@
     
     <!-- timer +1m-->
     <div class="class_up_btn col-md-2">
-      <button type="button" id="id_minute_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋1m </button>
+      <button type="button" id="id_minute_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋M </button>
     </div>
     
     <!-- timer -1m -->
     <div class="class_minus_btn col-md-2">
-        <button type="button" id="id_minute_minuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1m </button>
+        <button type="button" id="id_minute_minuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -M </button>
     </div>
     
     <!-- timer start stop -->
@@ -315,12 +315,12 @@
     
     <!-- timer +1s -->
     <div class="class_up_btn col-md-2">
-      <button type="button" id="id_second_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> +1s </button>
+      <button type="button" id="id_second_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> +S </button>
     </div>
     
     <!-- timer -1s -->
     <div class="class_minus_btn col-md-2">
-      <button type="button" id="id_second_minuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1s </button>
+      <button type="button" id="id_second_minuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -S </button>
     </div>
     
   </div>
@@ -333,12 +333,12 @@
     
     <!-- A point plus -->
     <div class="class_24s_plus_btn col-md-2">
-      <button type="button" id="id_24_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋1s </button>
+      <button type="button" id="id_24_plus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> ＋S </button>
     </div>
     
     <!-- A point minus -->
     <div class="class_24s_minus_btn col-md-2">
-        <button type="button"id="id_24_minus" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -1s </button>
+        <button type="button"id="id_24_minus" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem;"> -S </button>
     </div>
     
     <!-- serve left -->
@@ -353,7 +353,7 @@
     
     <!-- Reset 24s -->
     <div class="class_reset24_btn col-md-2">
-      <button type="button" id="id_24_reset" class="btn btn-danger rounded-circle p-0 reset" style="width:5rem;height:5rem; font-size:25px;"> Reset 24s </button>
+      <button type="button" id="id_24_reset" class="btn btn-danger rounded-circle p-0 reset" style="width:5rem;height:5rem; font-size:40px;"> Re: </button>
     </div>
     
   </div>
@@ -366,12 +366,12 @@
     
     <!-- A foul plus -->
     <div class="class_foul_plus_btn col-md-2">
-      <button type="button" id="id_A_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_A_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:40px;"> ＋F </button>
     </div>
     
     <!-- A foul minus -->
     <div class="class_foul_minus_btn col-md-2">
-        <button type="button" id="id_A_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul - </button>
+        <button type="button" id="id_A_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:40px;"> -F </button>
     </div>
     
     <!-- buzzer left -->
@@ -381,12 +381,12 @@
     
     <!-- B foul plus -->
     <div class="class_foul_plus_btn col-md-2">
-      <button type="button" id="id_B_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_B_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:40px;"> ＋F </button>
     </div>
     
     <!-- B foul minus -->
     <div class="class_foul_minus_btn col-md-2">
-      <button type="button" id="id_B_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_B_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:40px;"> -F </button>
     </div>
     
   </div>
