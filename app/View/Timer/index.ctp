@@ -270,6 +270,8 @@
     
     <!-- buzzer audio file -->
     <audio id="id_buzzer_audio" src="buzzer.mp3"></audio>
+    <!-- 24s buzzer audio file -->
+    <audio id="id_24buzzer_audio" src="buzzer24.mp3"></audio>
     
     <!-- timer +1s -->
     <div class="class_up_btn col-md-2">
@@ -306,12 +308,12 @@
     
     <!-- 14s -->
     <div class="class_14s_btn col-md-2">
-      <button type="button" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> 14s </button>
+      <button type="button" id="id_14s_btn" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem;"> 14s </button>
     </div>
     
     <!-- Reset 24s -->
     <div class="class_reset24_btn col-md-2">
-      <button type="button" class="btn btn-danger rounded-circle p-0 reset" style="width:5rem;height:5rem; font-size:25px;"> Reset 24s </button>
+      <button type="button" id="id_24_reset" class="btn btn-danger rounded-circle p-0 reset" style="width:5rem;height:5rem; font-size:25px;"> Reset 24s </button>
     </div>
     
   </div>
@@ -324,12 +326,12 @@
     
     <!-- A foul plus -->
     <div class="class_foul_plus_btn col-md-2">
-      <button type="button" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_A_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
     </div>
     
     <!-- A foul minus -->
     <div class="class_foul_minus_btn col-md-2">
-        <button type="button" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul - </button>
+        <button type="button" id="id_A_fminuse" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul - </button>
     </div>
     
     <!-- buzzer left -->
@@ -339,12 +341,12 @@
     
     <!-- B foul plus -->
     <div class="class_foul_plus_btn col-md-2">
-      <button type="button" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_B_fplus" class="btn btn-primary rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
     </div>
     
     <!-- B foul minus -->
     <div class="class_foul_minus_btn col-md-2">
-      <button type="button" class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
+      <button type="button" id="id_B_fminus"class="btn btn-danger rounded-circle p-0" style="width:5rem;height:5rem; font-size:25px;"> foul ＋ </button>
     </div>
     
   </div>
@@ -595,6 +597,8 @@
     
     
     
+    
+    
     //flag for paused
     var myInterval = -1;
     
@@ -728,6 +732,13 @@
     
     var tfremainingtime = 0;
     
+    var tfBuzzer = $('#id_24buzzer_audio').get(0);
+    
+    // adjust volume
+    tfBuzzer.volume = 0.1;
+    
+    
+    
     //24s plus 
     $('#id_24_plus').click(function(){
       
@@ -814,8 +825,8 @@
           
           $('#id_24_btn').html('24s start');
           
-          //play buzzer sound
-          buzzer.play();
+          //play tfBuzzer sound
+          tfBuzzer.play();
           
           //24 timer is stopped
           clearInterval(tfInterval);
@@ -823,6 +834,34 @@
       }
       
     });
+    
+    //14s button
+    $('#id_14s_btn').click(function(){
+      
+      tfTimer = 14;
+      //デバグ
+      console.log(tfTimer);
+      
+      $('#id_24').html(tfTimer);
+      
+    });
+    
+    //24s reset button
+    $('#id_24_reset').click(function(){
+      
+      tfTimer =24;
+      //debug
+      console.log(tfTimer);
+      
+      $('#id_24').html(tfTimer);
+      
+    });
+    
+    //foul count
+    $('#id_A_fplus').click(function(){
+      
+    });
+    
     
     //------------------------------------------
     
