@@ -1,5 +1,9 @@
 <!-- css -->
+
+<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+
 <style media="screen">
+
   body{
     background: black;
   }
@@ -18,6 +22,7 @@
     text-align: center;
     padding: 0;
     /* margin: 20px; */
+    font-family: 'Electrolize', sans-serif;
   }
   
   .class_24{
@@ -26,6 +31,7 @@
     vertical-align: middle;
     line-height: normal;
     color:white;
+    font-family: 'Electrolize', sans-serif;
   }
   
   .class_point{
@@ -33,6 +39,7 @@
     text-align: center;
     vertical-align: middle;
     color: white;
+    font-family: 'Electrolize', sans-serif;
   }
   
   .class_foul_count{
