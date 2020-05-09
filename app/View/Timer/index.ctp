@@ -18,11 +18,12 @@
   
   .class_gametimer{
     color: white;
-    font-size: 200px;
+    font-size: 168px;
     text-align: center;
     padding: 0;
     /* margin: 20px; */
     font-family: 'Electrolize', sans-serif;
+    margin-top: 35px;
   }
   
   .class_24{
@@ -1082,6 +1083,39 @@
       
     });
     
+  //duble click game reset
+	$("#id_24_reset").dblclick(function(){
+        remainingTime = 0;
+        $('#id_gametimer').html("00:00");
+        
+        count_A_p1p = 0;
+        $("#id_a_point").html(count_A_p1p);
+        
+        count_B_p1p = 0;
+        $("#id_b_point").html(count_B_p1p);
+        
+        tfTimer = 24;
+        $("#id_24").html(tfTimer);
+        
+        Afcnt = 0;
+        $('#Af5').css('visibility','');
+        $('#Af4').css('visibility','');
+        $('#Af3').css('visibility','');
+        $('#Af2').css('visibility','');
+        $('#Af1').css('visibility','');
+        
+        Bfcnt = 0;
+        $('#Bf5').css('visibility','');
+        $('#Bf4').css('visibility','');
+        $('#Bf3').css('visibility','');
+        $('#Bf2').css('visibility','');
+        $('#Bf1').css('visibility','');
+        
+         serve_home = 1;
+         $('#id_serve_home').css('visibility','visible');
+         serve_away = 1;
+         $('#id_serve_away').css('visibility','visible');
+	});
     
     //------------------------------------------
     
