@@ -1084,7 +1084,7 @@
     });
     
   //duble click game reset
-	$("#id_24_reset").dblclick(function(){
+	$("#id_buzzer_btn").dblclick(function(){
         remainingTime = 0;
         $('#id_gametimer').html("00:00");
         
