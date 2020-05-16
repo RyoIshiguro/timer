@@ -400,9 +400,6 @@
   </div>
   <!-- fourth line -->
 
-  </div>
-  
-
 <script type="text/javascript">
 
   //
@@ -638,7 +635,7 @@
     // adjust volume
     buzzer.volume = 0.1;
     
-    $('#id_buzzer_btn').click(function()
+    $('#id_buzzer_btn').on("mousedown",function()
     {
       buzzer.play();
     });
@@ -1083,39 +1080,41 @@
       
     });
     
-  //duble click game reset
-	$("#id_buzzer_btn").dblclick(function(){
-        remainingTime = 0;
-        $('#id_gametimer').html("00:00");
+    //game reset with longpress
+    //------------------------------------------
+    
+    //buzzer repeat play with longpress
+    //------------------------------------------
+    /// 長押しを検知する閾値
+    var longpress_buzzer = 1990;
+    /// 長押し実行タイマーのID
+    var longpressId;
+    // 長押しフラグ
+    var buzzer_flg = 0;
+     
+    /// 長押し・ロングタップを検知する
+    $('#id_buzzer_btn').on("mousedown",function(){
+      //長押しフラグ
+      buzzer_flg = 1;
+      
+      if(buzzer_flg == 1){
         
-        count_A_p1p = 0;
-        $("#id_a_point").html(count_A_p1p);
+        longpressId = setTimeout(function(){
+          
+          tfBuzzer.play();
+          
+        }, longpress_buzzer);
         
-        count_B_p1p = 0;
-        $("#id_b_point").html(count_B_p1p);
-        
-        tfTimer = 24;
-        $("#id_24").html(tfTimer);
-        
-        Afcnt = 0;
-        $('#Af5').css('visibility','');
-        $('#Af4').css('visibility','');
-        $('#Af3').css('visibility','');
-        $('#Af2').css('visibility','');
-        $('#Af1').css('visibility','');
-        
-        Bfcnt = 0;
-        $('#Bf5').css('visibility','');
-        $('#Bf4').css('visibility','');
-        $('#Bf3').css('visibility','');
-        $('#Bf2').css('visibility','');
-        $('#Bf1').css('visibility','');
-        
-         serve_home = 1;
-         $('#id_serve_home').css('visibility','visible');
-         serve_away = 1;
-         $('#id_serve_away').css('visibility','visible');
-	});
+      }
+    }).on("mouseup",function(){
+      
+      buzzer_flg = 0;
+      
+      clearTimeout(longpressId);
+      
+    });
+    //game reset with longpress
+    //------------------------------------------
     
     //------------------------------------------
     
